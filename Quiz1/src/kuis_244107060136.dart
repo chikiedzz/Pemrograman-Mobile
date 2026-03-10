@@ -1,13 +1,10 @@
 void main() {
 
-  // Identitas mahasiswa
   String namaMahasiswa = "Giska Aishanda Chrysilla";
   String nimMahasiswa = "244107060136";
 
-  // Mengambil 3 digit terakhir NIM
   double nilaiUnik = 136;
 
-  // Daftar harga barang (menggunakan angka yang berbeda)
   List<double> daftarHarga = [
     62500.75,
     41250.50,
@@ -16,16 +13,13 @@ void main() {
     27450.60
   ];
 
-  // Menambahkan nilai unik NIM ke dalam list
   daftarHarga.add(nilaiUnik);
 
-  // Menghitung total harga
   double totalBelanja = hitungTotalBelanja(daftarHarga);
 
   double nilaiDiskon = 0;
   String? keteranganDiskon;
 
-  // Logika penentuan diskon
   if (totalBelanja > 200000) {
     nilaiDiskon = totalBelanja * 0.10;
     keteranganDiskon = "Mendapat diskon 10%";
@@ -41,7 +35,6 @@ void main() {
 
   double totalBayar = totalBelanja - nilaiDiskon;
 
-  // Output program
   print("===== STRUK PEMBELIAN =====");
   print("Nama Mahasiswa : $namaMahasiswa");
   print("NIM            : $nimMahasiswa");
@@ -51,7 +44,6 @@ void main() {
   print("Total Dibayar  : Rp $totalBayar");
 }
 
-// Fungsi untuk menghitung total belanja
 double hitungTotalBelanja(List<double> listHarga) {
 
   double total = 0;
